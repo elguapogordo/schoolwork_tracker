@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Student, type: :model do
+  describe 'associations' do
+    it { should have_many(:subjects) }
+  end
+  
   student = described_class.new(
       name: 'Kevin'
     )
