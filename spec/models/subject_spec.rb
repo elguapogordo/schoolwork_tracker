@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe Subject, type: :model do
   describe 'associations' do
     it { should belong_to(:student) }
+    it { should have_many(:pages) }
   end
   
   describe 'validations' do
